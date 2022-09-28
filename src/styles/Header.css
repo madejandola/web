@@ -1,0 +1,135 @@
+/* purgecss start ignore */
+
+header nav {
+  display: block;
+}
+
+header nav a {
+  display: inline-block;
+  text-decoration: none;
+  @apply tracking-wider transition-all duration-500 border-transparent;
+}
+
+@screen lg {
+  header nav a {
+    @apply text-xl;
+  }
+}
+
+.headroom-wrapper {
+  position: absolute;
+}
+
+.headroom {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  position: fixed !important;
+  @apply transition-all duration-500 bg-transparent;
+}
+
+@screen md {
+  .headroom {
+    @apply bg-transparent;
+  }
+}
+
+.headroom--scrolled {
+  @apply bg-white shadow-lg;
+}
+
+.headroom--unpinned {
+  position: fixed;
+  @apply bg-white shadow-lg;
+  transform: translateY(0);
+}
+
+/*
+@screen md {
+  .headroom--unpinned {
+    transform: translateY(-100%);
+    background: transparent !important;
+  }
+}
+*/
+.headroom--pinned {
+  position: fixed;
+  transform: translateY(0%);
+}
+
+body.about .headroom--pinned {
+  transform: translateY(-100%);
+}
+
+body.about .headroom--unpinned {
+  transform: translateY(-100%);
+}
+
+.nav-left a {
+  @apply text-white;
+}
+
+.headroom--pinned a {
+  @apply text-gray-900;
+}
+.headroom--unpinned a {
+  @apply text-gray-900;
+}
+
+.header-container {
+  @apply z-50 px-2 py-2 transition-all duration-500 md:py-0;
+}
+
+body.ingame .headroom {
+  @apply bg-white shadow-sm bg-opacity-90 backdrop-blur backdrop-filter !important;
+}
+
+body.home .headroom--unpinned,
+body.home .headroom--pinned {
+  @apply bg-white shadow-sm bg-opacity-90 backdrop-blur backdrop-filter;
+}
+
+body.ingame .header-container a {
+  @apply text-gray-800;
+}
+
+body.ingame .header-container a.active {
+  @apply text-gray-800 border-gray-800;
+}
+
+.logo-container {
+  @apply m-0 md:relative;
+  top: 1px;
+  transition: all 1s;
+}
+
+.logo-container .kallpa-logo {
+  transition: all 1s;
+}
+
+.headroom--pinned .logo-container .kallpa-logo {
+  transform: scale(0.95) rotate(120deg);
+}
+
+.headroom--unpinned .logo-container .kallpa-logo {
+  transform: scale(0.95) rotate(60deg);
+}
+
+.logo-container .gatsby-image-wrapper {
+  @apply w-24;
+}
+
+.logo-container a {
+  @apply text-white hover:text-gray-100;
+}
+
+.headroom--unpinned .logo-container a {
+  @apply text-gray-800;
+}
+
+.headroom--scrolled .logo-container a {
+  @apply text-gray-800;
+}
+
+/* purgecss end ignore */

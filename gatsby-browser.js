@@ -1,0 +1,6 @@
+require("./src/styles/global.css")
+require("./src/styles/Offcanvas.css")
+require("./src/styles/Header.css")
+require("@fontsource/inconsolata")
+require("@fontsource/eb-garamond")
+require("@fontsource/arima-madurai")
