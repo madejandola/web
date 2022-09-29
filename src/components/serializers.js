@@ -35,12 +35,12 @@ const serializers = {
       console.log(value)
       return (
         <>
-          <GatsbyImage
+          {/* <GatsbyImage
             title="ads"
             className="mx-auto"
             alt="ads"
             image={url}
-          />
+          /> */}
           {url}
         </>
       )
