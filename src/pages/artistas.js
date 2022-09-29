@@ -17,7 +17,7 @@ const ArtistPage = ({ data }) => {
           <h1 className="font-serif text-6xl text-center">Artistas</h1>
           <div className="grid grid-cols-3 gap-12 pt-12">
             {data.allSanityAuthor.edges.map(({ node: author }) => (
-              <div key={author.id} className="w-full">
+              <div key={author.name} className="w-full">
                 <Link
                   to={`/artistas/${kebabCase(author.slug.current)}`}
                   className="block px-2 py-2 mr-2 font-sans text-2xl font-bold text-center text-gray-900 transition-all duration-300 border-t border-b transform-gpu lg:px-0 hover:border-gray-700">

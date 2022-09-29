@@ -31,7 +31,7 @@ header nav a {
 
 @screen md {
   .headroom {
-    @apply bg-transparent;
+    @apply bg-white;
   }
 }
 
@@ -67,7 +67,7 @@ body.about .headroom--unpinned {
 }
 
 .nav-left a {
-  @apply text-white;
+  @apply text-gray-900 min-w-[120px] text-center flex justify-center items-center;
 }
 
 .headroom--pinned a {

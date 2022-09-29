@@ -4,13 +4,13 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `MuseoGaleria`,
-    titleTemplate: "%s | MuseoGaleria",
-    description: `Museo Galeria`,
-    author: `@centrodeestudiosajmatova`,
-    siteUrl: "https://www.museogaleria.com.ar",
-    image: "https://www.museogaleria.com.ar/ogimage.jpg",
-    twitterUsername: `@museogaleria`
+    title: `Madejandola`,
+    titleTemplate: "%s | Madejandola",
+    description: `Sumérgete en un universo lleno de historias que nacen en los hilos de América Latina`,
+    author: `@Madejandola`,
+    siteUrl: "https://www.madejandola.com",
+    image: "https://www.madejandola.com/ogimage.jpg",
+    twitterUsername: `@Madejandola`
   },
   plugins: [
     {

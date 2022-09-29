@@ -4,9 +4,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      sans: ["EB Garamond", "sans-serif"],
-      mono: ["Inconsolata", "mono"],
-      serif: ["Arima Madurai", "sans-serif"],
+      sans: ["Alegreya Sans", "sans"],
+      mono: ["Alegreya SC", "mono"],
+      serif: ["Alegreya", "sans-serif"],
     },
     extend: {},
   },

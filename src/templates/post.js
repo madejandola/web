@@ -24,17 +24,17 @@ const PostTemplatePage = ({ data, pageContext, location }) => {
             />
           </div>
         )}
-        <Link to="/blog" className="relative z-50 flex my-6 uppercase hover:opacity-80 hover:border-gray-500">
+        <div className="relative z-50 flex my-6 uppercase hover:opacity-80 hover:border-gray-500">
           {data.sanityPost.categories && (
             <div className="">
               {data.sanityPost.categories.map(({ title, slug, _id }) => (
-                <Link key={_id} className="inline-block mx-2 text-white border-b-2 border-white" to={`/blog/categoria/${kebabCase(slug.current)}`}>
+                <Link key={title} className="inline-block mx-2 text-white border-b-2 border-white" to={`/blog/categoria/${kebabCase(slug.current)}`}>
                   {title}
                 </Link>
               ))}
             </div>
           )}
-        </Link>
+        </div>
         <h1 className="relative z-50 max-w-6xl px-3 mx-auto my-3 mb-12 font-sans text-2xl tracking-wider text-center text-gray-100 md:text-6xl ">{data.sanityPost.title}</h1>
         <div className="flex flex-col items-center mb-6 md:justify-between md:flex-row">
           <p className="py-1 font-sans font-bold text-center text-gray-100 md:text-lg opacity-90">
@@ -70,8 +70,8 @@ const PostTemplatePage = ({ data, pageContext, location }) => {
       </nav>
       <div className="grid grid-cols-1 gap-4 p-5 md:grid-cols-2 xl:grid-cols-3">
         {data.category.edges.map(({ node: post }) => (
-          <Link
-            to={`/blog/${kebabCase(post.slug.current)}`}
+          <div
+            key={post.title}
             className="relative flex items-center justify-center h-64 overflow-hidden transition-all duration-700 ease-in-out transform bg-gray-900 blog-item">
             <figure className="absolute inset-0 w-full h-64 overflow-hidden opacity-30 ">
               {post.image && <img alt={post.title} src={post.image.secure_url} className="w-full h-64 object-full" />}
@@ -83,7 +83,7 @@ const PostTemplatePage = ({ data, pageContext, location }) => {
               <div className="flex flex-col items-center justify-center mt-4">
                 {post.categories.map(({ title, slug, _id }) => (
                   <Link
-                    key={_id}
+                    key={title}
                     className="inline-block mb-1 font-mono text-sm font-bold text-center text-gray-100 uppercase transition-all duration-500 transform-gpu hover:opacity-80 hover:text-gray-300"
                     to={`/blog/categoria/${kebabCase(slug.current)}`}>
                     « {title} »
@@ -91,7 +91,7 @@ const PostTemplatePage = ({ data, pageContext, location }) => {
                 ))}
               </div>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </Layout>
@@ -114,7 +114,20 @@ export const query = graphql`
         }
         _id
       }
-      _rawBody
+      _rawBody(resolveReferences: { maxDepth: 10 })
+      body {
+        _type
+        _key
+        children {
+          _key
+          text
+          marks
+          _type
+        }
+        list
+        style
+        _rawChildren(resolveReferences: {maxDepth: 10})
+      }
       image {
         secure_url
         url

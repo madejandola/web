@@ -1,10 +1,10 @@
-import Layout from "../components/Layout"
 import { graphql } from "gatsby"
+import Layout from "../components/Layout"
 import Seo from "../components/Seo"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 // import Img from "gatsby-image"
 import React from "react"
-import { kebabCase } from "lodash"
+// import { kebabCase } from "lodash"
 import { Helmet } from "react-helmet"
 // import { GatsbyImage } from "gatsby-plugin-image"
 

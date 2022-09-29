@@ -15,7 +15,7 @@ const ContactPage = () => {
           <div className="max-w-full prose prose-xl">
             <h1>Sobre MadejándoLA</h1>
             <article>
-              <div class="inner">
+              <div className="inner">
                 <h2>¿Qué hacemos?</h2>
 
                 <p>En MadejándoLA contamos las historias detrás de las tradiciones textiles de América Latina. Creemos en el poder de las narrativas para comunicar cosas importantes. En los textiles artesanales, las técnicas son importantes, pero los creadores lo son más.</p>
@@ -28,7 +28,7 @@ const ContactPage = () => {
               </div>
             </article>
             <article>
-              <div class="inner">
+              <div className="inner">
                 <h2>¿Por qué MadejándoLA?</h2>
                 <p>Las tradiciones textiles son resistencias. Resistencias silenciosas que encuentran su modo de sobrevivir a través del dinamismo y la transformación. Se van reconfigurando con el tiempo y son producto de la creatividad nata y la capacidad de adaptación de los pueblos originarios. Son resistencias silentes y resilientes, portadoras de diversidad.</p>
 
@@ -38,20 +38,20 @@ const ContactPage = () => {
               </div>
             </article>
             <article>
-              <div class="inner">
+              <div className="inner">
                 <h2>¿A quién sirve?</h2>
 
-                <div class="destinado">
-                  <div class="destinado-item aos-init aos-animate" data-aos="zoom-in">Amantes del textil</div>
-                  <div class="destinado-item aos-init aos-animate" data-aos="zoom-in">Curiosos</div>
-                  <div class="destinado-item aos-init aos-animate" data-aos="zoom-in">Investigadores</div>
-                  <div class="destinado-item aos-init aos-animate" data-aos="zoom-in">Estudiantes</div>
-                  <div class="destinado-item aos-init aos-animate" data-aos="zoom-in">Diseñadores</div>
+                <div className="destinado">
+                  <div className="destinado-item aos-init aos-animate" data-aos="zoom-in">Amantes del textil</div>
+                  <div className="destinado-item aos-init aos-animate" data-aos="zoom-in">Curiosos</div>
+                  <div className="destinado-item aos-init aos-animate" data-aos="zoom-in">Investigadores</div>
+                  <div className="destinado-item aos-init aos-animate" data-aos="zoom-in">Estudiantes</div>
+                  <div className="destinado-item aos-init aos-animate" data-aos="zoom-in">Diseñadores</div>
                 </div>
               </div>
             </article>
-            <article class="donate">
-              <div class="inner">
+            <article className="donate">
+              <div className="inner">
                 <h2>Dona</h2>
                 <h3>¿Te gusta lo que hacemos? Puedes ayudarnos a contar más historias donando a MadejándoLA. Con tu dinero podremos gestionar viajes, pagar a nuestros colaboradores y sostener el mantenimiento y actualización del sitio.</h3>
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -63,21 +63,21 @@ const ContactPage = () => {
               </div>
             </article>
             <article>
-              <div class="inner">
+              <div className="inner">
                 <h2>SERVICIOS</h2>
                 <h4>Nos especializamos en comunicación visual dedicada a proyectos de producción y difuisión de técnicas artesanales, principalmente de textiles pero no exclusivamente.</h4>
 
                 <h3>Ofrecemos siguientes servicios de comunicación visual:</h3>
 
-                <div class="servicios">
-                  <div class="item-servicios">Creación de cortometrajes, piezas narrativas audiovisuales y multimedia.</div>
-                  <div class="item-servicios">Fotografía de procesos productivos, eventos, producto.</div>
-                  <div class="item-servicios">Diseño gráfico y visual: Logotipos, afiches y contenidos para redes.</div>
+                <div className="servicios">
+                  <div className="item-servicios">Creación de cortometrajes, piezas narrativas audiovisuales y multimedia.</div>
+                  <div className="item-servicios">Fotografía de procesos productivos, eventos, producto.</div>
+                  <div className="item-servicios">Diseño gráfico y visual: Logotipos, afiches y contenidos para redes.</div>
                 </div>
               </div>
             </article>
             <article>
-              <div class="inner">
+              <div className="inner">
                 <h2>Contacto</h2>
                 <h4>Trabajamos desde la sensibilidad y la empatía hacia propuestas sociales y comunitarias. Ofrecemos trabajo de alta calidad y mucho profesionalismo. Actualmente nos encontramos establecidas en Buenos Aires, Argentina y trabajamos presencialmente o a distancia, dependiendo el proyecto.</h4>
 
@@ -94,12 +94,12 @@ const ContactPage = () => {
               </div>
             </article>
             <article>
-              <div class="inner">
+              <div className="inner">
                 <h3>Estamos orgullosas de haber colaborado en el pasado con organizaciones de distintas latitudes y agradecemos su confianza.</h3>
-                <div class="confian">
-                  <div class="item-confian">Tepeni</div>
-                  <div class="item-confian">MonteGabriela</div>
-                  <div class="item-confian">Mujeres Maya Mam</div>
+                <div className="confian">
+                  <div className="item-confian">Tepeni</div>
+                  <div className="item-confian">MonteGabriela</div>
+                  <div className="item-confian">Mujeres Maya Mam</div>
                 </div>
               </div>
             </article>

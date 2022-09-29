@@ -64,16 +64,17 @@ const CategoriesTemplatePage = ({ data }) => (
       <section className="relative w-full max-w-6xl mx-auto overflow-y-auto">
         <div className="grid gap-2 px-6 py-6 md:grid-cols-2">
           {data.allSanityPost.edges.map(({ node: article }) => (
-            <Link
-              to={`/blog/${kebabCase(article.slug.current)}`}
+            <div
+              key={article.slug.current}
               className="relative flex items-center justify-center h-64 overflow-hidden transition-all duration-700 ease-in-out transform bg-gray-900 blog-item">
               <figure className="absolute inset-0 w-full h-64 overflow-hidden opacity-30 ">
                 {article.image && <img title={article.title} className="object-scale-down w-full" alt={article.title} src={article.image.secure_url}/>}
               </figure>
               <div className="relative z-50 w-full px-3 ">
-                <h4 className="px-6 mt-2 font-sans text-xl font-bold tracking-wider text-center text-white no-underline transition-all duration-500 transform-gpu md:text-3xl hover:opacity-70">
+                <Link
+              to={`/blog/${kebabCase(article.slug.current)}`} className="px-6 mt-2 font-sans text-xl font-bold tracking-wider text-center text-white no-underline transition-all duration-500 transform-gpu md:text-3xl hover:opacity-70">
                   {article.title}
-                </h4>
+                </Link>
                 <div className="flex-col items-center justify-center hidden mt-4">
                   {article.categories.map(({ title, slug, _id }) => (
                     <Link
@@ -86,7 +87,7 @@ const CategoriesTemplatePage = ({ data }) => (
                 </div>
                 <p className="hidden italic text-center text-white ">{article._createdAt}</p>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </section>

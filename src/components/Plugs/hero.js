@@ -20,7 +20,7 @@ function Hero(props) {
           </div>
         </div>
         <div className="relative z-40 flex flex-col items-center justify-center w-full max-w-lg p-6 bg-white rounded shadow-lg ">
-          <div className="max-w-6xl font-mono font-bold text-left md:text-lg">{props.tagline}</div>
+          <div className="max-w-6xl font-sans font-bold text-left md:text-lg">{props.tagline}</div>
           <div className="lg:px-0">
             <h2 className="mt-6 mb-6 font-serif text-3xl font-bold text-center ">{props.heading}</h2>
           </div>
